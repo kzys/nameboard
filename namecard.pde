@@ -3,20 +3,16 @@
 LiquidCrystal lcd(13, 2, 12, 4, 8, 7);
 
 char* MESSAGES[] = {
-  // RubyKaigi
-  "RubyKaigi 2011      \xd9\xcb\xde\xb0\xb6\xb2\xb7\xde  \xc6\xfa+-      ",
-  "RubyKaigi 2011      July 16 - 18        ",
+  // Git / GitHub
+  "There is no way to  do CVS right        ",
+  "GitHub              Social Coding       ",
+  "GitHub Tokyo Meetup \xb7\xde\xaf\xc4\xca\xcc\xde\xc4\xb3\xb7\xae\xb3 \xd0-\xc4\xb1\xaf\xcc\xdf",
   // Me
   "I'm Kato Kazuyoshi  \xdc\xc0\xbc \xca \xb6\xc4\xb3 \xb6\xbd\xde\xd6\xbc \xc3\xde\xbd ",
-  "I'm a committer of  Scaladoc (and Scala)",
-  "I'm @kzys           http://8-p.info/    ",
-  // Ruby
-  " oo  chunky bacon!!  _ >                ",
-  "XML is like violenceXML \xca \xce\xde\xb3\xd8\xae\xb8 \xc6 \xc6\xc3\xb2\xd9   ",
-  "Matz is nice,       so we are nice.     ",
-  "What would          Freddie Mercury do? ",
+  "github.com/kzys     8-p.info/           ",
+  "I'm @kzys                               ",
   // Others
-  "Powered by          Arduino Uno         ",
+  "This \"name board\"   works on Arduino Uno ",
 };
 int count = 0;
 int SMOOTHNESS = 7;
@@ -60,7 +56,7 @@ void loop() {
     delay(5);
   } else {
     count = 0;
-    delay(5000);
+    delay(10000);
 
     now = next;
     next = random(sizeof(MESSAGES) / sizeof(MESSAGES[1]));
